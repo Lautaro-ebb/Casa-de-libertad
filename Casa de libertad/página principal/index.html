@@ -1,0 +1,92 @@
+<html>
+<head>
+    <title>Dynamic Responsive Web Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-gray-800">
+                <img src="/página principal/img/logo-de-la-iglesia-removebg-preview.png" alt="Company Logo" class="h-12" width="50" height="50"/>
+            </div>
+            <nav class="hidden md:flex space-x-4">
+                <a href="#" class="text-gray-600 hover:text-gray-800">Home</a>
+                <a href="#" class="text-gray-600 hover:text-gray-800">About</a>
+                <a href="#" class="text-gray-600 hover:text-gray-800">Services</a>
+                <a href="#" class="text-gray-600 hover:text-gray-800">Contact</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-button" class="text-gray-600 focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-200">Home</a>
+            <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-200">About</a>
+            <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-200">Services</a>
+            <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-200">Contact</a>
+        </div>
+    </header>
+    <!-- Banner -->
+    <section class="relative">
+        <video autoplay loop muted class="w-full h-96 object-cover">
+            <source src="/página principal/videos/banner de la iglesiaaa.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+    <!-- Text Section -->
+    <section class="container mx-auto px-4 py-8 text-center">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Mission</h2>
+        <p class="text-gray-600 mb-6">We strive to deliver the best service to our customers. Our mission is to provide high-quality products and services that meet the needs and expectations of our clients.</p>
+        <div class="flex justify-center space-x-4">
+            <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 flex flex-col items-center">
+                <img src="#" alt="Icon representing learning more" class="mb-2" width="100" height="100"/>
+                <span>De Villa 213</span>
+            </a>
+            <a href="#" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 flex flex-col items-center">
+                <img src="#" alt="Icon representing getting started" class="mb-2" width="100" height="100"/>
+                <span>De Formosa</span>
+            </a>
+            <a href="#" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 flex flex-col items-center">
+                <img src="#" alt="Icon representing contacting us" class="mb-2" width="100" height="100"/>
+                <span>De El Colorado</span>
+            </a>
+        </div>
+    </section>
+    <!-- Images Section -->
+    <section class="container mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <img src="#" alt="A beautiful landscape with mountains and a lake" class="rounded shadow-md" width="400" height="300"/>
+        <img src="#" alt="A close-up of a flower with vibrant colors" class="rounded shadow-md" width="400" height="300"/>
+        <img src="#" alt="A city skyline at sunset with skyscrapers" class="rounded shadow-md" width="400" height="300"/>
+        <img src="#" alt="A serene beach with clear blue water and white sand" class="rounded shadow-md" width="400" height="300"/>
+        <img src="#" alt="A forest trail with tall trees and sunlight filtering through" class="rounded shadow-md" width="400" height="300"/>
+        <img src="#" alt="A bustling market with colorful stalls and people" class="rounded shadow-md" width="400" height="300"/>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2023 Company Name. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('menu-button').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
